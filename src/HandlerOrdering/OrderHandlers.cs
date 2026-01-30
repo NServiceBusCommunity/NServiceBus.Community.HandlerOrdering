@@ -13,7 +13,18 @@
     {
         var handlerDependencies = GetHandlerDependencies(configuration);
         var sorted = new TypeSorter(handlerDependencies).Sorted;
-        configuration.ExecuteTheseHandlersFirst(sorted);
+
+        var addHandlerMethod = typeof(EndpointConfiguration).GetMethod("AddHandler", BindingFlags.Instance | BindingFlags.Public);
+        if (addHandlerMethod == null)
+        {
+            throw new($"Could not find 'AddHandler' method on {nameof(EndpointConfiguration)}. Raise an issue here https://github.com/NServiceBusExtensions/NServiceBus.HandlerOrdering/issues/new");
+        }
+
+        foreach (var handlerType in sorted)
+        {
+            var genericMethod = addHandlerMethod.MakeGenericMethod(handlerType);
+            genericMethod.Invoke(configuration, null);
+        }
     }
 
     static Dictionary<Type, List<Type>> GetHandlerDependencies(EndpointConfiguration configuration)
