@@ -8,15 +8,12 @@
         {
             var dependencies = new Dictionary<Type, List<Type>>
             {
-                [typeof(Class1)] = new()
-                {
+                [typeof(Class1)] =
+                [
                     typeof(Class2),
                     typeof(Class3)
-                },
-                [typeof(Class2)] = new()
-                {
-                    typeof(Class3)
-                }
+                ],
+                [typeof(Class2)] = [typeof(Class3)]
             };
             var sorted = new TypeSorter(dependencies).Sorted;
             Assert.Equal(3, sorted.Count);
@@ -39,18 +36,12 @@
         {
             var dependencies = new Dictionary<Type, List<Type>>
             {
-                [typeof(Class1)] = new()
-                {
-                    typeof(Class2),
-                },
-                [typeof(Class2)] = new()
-                {
-                    typeof(Class3)
-                },
-                [typeof(Class3)] = new()
-                {
-                    typeof(Class1)
-                }
+                [typeof(Class1)] =
+                [
+                    typeof(Class2)
+                ],
+                [typeof(Class2)] = [typeof(Class3)],
+                [typeof(Class3)] = [typeof(Class1)]
             };
             var exception = Assert.Throws<Exception>(() => new TypeSorter(dependencies));
             var expected =
@@ -76,10 +67,10 @@
         {
             var dependencies = new Dictionary<Type, List<Type>>
             {
-                [typeof(Class1)] = new()
-                {
-                    typeof(Class1),
-                }
+                [typeof(Class1)] =
+                [
+                    typeof(Class1)
+                ]
             };
             var exception = Assert.Throws<Exception>(() => new TypeSorter(dependencies));
             var expected = """

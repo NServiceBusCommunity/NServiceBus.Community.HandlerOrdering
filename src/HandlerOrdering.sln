@@ -2,7 +2,7 @@
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 16.0.29201.188
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.HandlerOrdering", "HandlerOrdering\NServiceBus.HandlerOrdering.csproj", "{6252324B-3DE9-4DA1-B531-C1555B8D7C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.Community.HandlerOrdering", "HandlerOrdering\NServiceBus.Community.HandlerOrdering.csproj", "{6252324B-3DE9-4DA1-B531-C1555B8D7C8D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "Sample\Sample.csproj", "{161F9409-B0F7-4940-9C3A-988B8A9DBDD0}"
 EndProject
@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		appveyor.yml = appveyor.yml
 		Directory.Build.props = Directory.Build.props
 		global.json = global.json
+		..\readme.source.md = ..\readme.source.md
 	EndProjectSection
 EndProject
 Global

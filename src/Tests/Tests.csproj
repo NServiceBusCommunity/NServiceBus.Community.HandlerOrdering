@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>testing</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
@@ -11,7 +11,7 @@
     <PackageReference Include="XunitContext" Version="3.3.2" />
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="27.0.2" />
     <PackageReference Include="Verify.Xunit" Version="29.4.0" />
-    <ProjectReference Include="..\HandlerOrdering\NServiceBus.HandlerOrdering.csproj" />
+    <ProjectReference Include="..\HandlerOrdering\NServiceBus.Community.HandlerOrdering.csproj" />
     <PackageReference Include="ProjectDefaults" Version="1.0.150" PrivateAssets="all" />
   </ItemGroup>
 </Project>

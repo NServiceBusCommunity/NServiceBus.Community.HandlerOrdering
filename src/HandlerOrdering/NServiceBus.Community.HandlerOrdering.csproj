@@ -2,10 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>NServiceBus.HandlerOrdering</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NServiceBus" Version="9.2.7" />
     <PackageReference Include="ProjectDefaults" Version="1.0.150" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
   </ItemGroup>
 </Project>
