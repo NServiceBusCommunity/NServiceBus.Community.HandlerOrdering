@@ -5,10 +5,10 @@ Source File: /readme.source.md
 To change this file edit the source file and then run MarkdownSnippets.
 -->
 
-# <img src="/src/icon.png" height="30px"> NServiceBus.HandlerOrdering
+# <img src="/src/icon.png" height="30px"> NServiceBus.Community.HandlerOrdering
 
-[![Build status](https://ci.appveyor.com/api/projects/status/l2jg521r03ei7a3n/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/nservicebus-HandlerOrdering)
-[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.HandlerOrdering.svg)](https://www.nuget.org/packages/NServiceBus.HandlerOrdering/)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/nservicebus-community-HandlerOrdering)](https://ci.appveyor.com/project/SimonCropp/nservicebus-community-HandlerOrdering)
+[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.Community.HandlerOrdering.svg)](https://www.nuget.org/packages/NServiceBus.Community.HandlerOrdering/)
 
 This extension allows a more expressive way to [order handlers](https://docs.particular.net/nservicebus/handlers/handler-ordering). HandlerOrdering allows the dependency between handlers to be expressed via interfaces and the resulting order is derived at runtime.
 
@@ -61,7 +61,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
 
 ## NuGet package
 
-https://nuget.org/packages/NServiceBus.HandlerOrdering/
+https://nuget.org/packages/NServiceBus.Community.HandlerOrdering/
 
 
 ## Usage
