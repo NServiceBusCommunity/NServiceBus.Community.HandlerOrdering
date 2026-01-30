@@ -1,7 +1,7 @@
-# <img src="/src/icon.png" height="30px"> NServiceBus.HandlerOrdering
+# <img src="/src/icon.png" height="30px"> NServiceBus.Community.HandlerOrdering
 
-[![Build status](https://ci.appveyor.com/api/projects/status/l2jg521r03ei7a3n/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/nservicebus-HandlerOrdering)
-[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.HandlerOrdering.svg)](https://www.nuget.org/packages/NServiceBus.HandlerOrdering/)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/nservicebus-community-HandlerOrdering)](https://ci.appveyor.com/project/SimonCropp/nservicebus-community-HandlerOrdering)
+[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.Community.HandlerOrdering.svg)](https://www.nuget.org/packages/NServiceBus.Community.HandlerOrdering/)
 
 This extension allows a more expressive way to [order handlers](https://docs.particular.net/nservicebus/handlers/handler-ordering). HandlerOrdering allows the dependency between handlers to be expressed via interfaces and the resulting order is derived at runtime.
 
@@ -14,19 +14,19 @@ toc
 
 ## Community backed
 
-**It is expected that all developers either [become a Patron](https://opencollective.com/nservicebusextensions/contribute/patron-6976) or have a [Tidelift Subscription](#support-via-tidelift) to use NServiceBusExtensions. [Go to licensing FAQ](https://github.com/NServiceBusExtensions/Home/#licensingpatron-faq)**
+**It is expected that all developers [become a Patron](https://opencollective.com/nservicebuscommunity/contribute/patron-6976) to use NServiceBus Community Extensions. [Go to licensing FAQ](https://github.com/NServiceBusCommunity/Home/#licensingpatron-faq)**
 
 
 ### Sponsors
 
-Support this project by [becoming a Sponsor](https://opencollective.com/nservicebusextensions/contribute/sponsor-6972). The company avatar will show up here with a website link. The avatar will also be added to all GitHub repositories under the [NServiceBusExtensions organization](https://github.com/NServiceBusExtensions).
+Support this project by [becoming a Sponsor](https://opencollective.com/nservicebuscommunity/contribute/sponsor-6972). The company avatar will show up here with a website link. The avatar will also be added to all GitHub repositories under the [NServiceBusCommunity organization](https://github.com/NServiceBusCommunity).
 
 
 ### Patrons
 
-Thanks to all the backing developers. Support this project by [becoming a patron](https://opencollective.com/nservicebusextensions/contribute/patron-6976).
+Thanks to all the backing developers. Support this project by [becoming a patron](https://opencollective.com/nservicebuscommunity/contribute/patron-6976).
 
-<img src="https://opencollective.com/nservicebusextensions/tiers/patron.svg?width=890&avatarHeight=60&button=false">
+<img src="https://opencollective.com/nservicebuscommunity/tiers/patron.svg?width=890&avatarHeight=60&button=false">
 
 <a href="#" id="endofbacking"></a>
 
@@ -40,7 +40,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
 
 ## NuGet package
 
-https://nuget.org/packages/NServiceBus.HandlerOrdering/
+https://nuget.org/packages/NServiceBus.Community.HandlerOrdering/
 
 
 ## Usage
