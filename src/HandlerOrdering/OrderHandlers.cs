@@ -1,6 +1,13 @@
 ﻿class OrderHandlers :
     INeedInitialization
 {
+    static readonly Lazy<MethodInfo> addHandlerMethod = new(() =>
+    {
+        var extensionsType = typeof(EndpointConfiguration).Assembly.GetType("NServiceBus.MessageHandlerRegistrationExtensions");
+        return extensionsType?.GetMethod("AddHandler", BindingFlags.Static | BindingFlags.Public)
+            ?? throw new("Could not find 'AddHandler' method on MessageHandlerRegistrationExtensions. Raise an issue here https://github.com/NServiceBusCommunity/NServiceBus.Community.HandlerOrdering/issues/new");
+    });
+
     public void Customize(EndpointConfiguration configuration)
     {
         if (configuration.GetApplyInterfaceHandlerOrdering())
@@ -13,19 +20,21 @@
     {
         var handlerDependencies = GetHandlerDependencies(configuration);
         var sorted = new TypeSorter(handlerDependencies).Sorted;
-        configuration.ExecuteTheseHandlersFirst(sorted);
+
+        foreach (var handlerType in sorted)
+        {
+            var genericMethod = addHandlerMethod.Value.MakeGenericMethod(handlerType);
+            genericMethod.Invoke(null, [configuration]);
+        }
     }
 
     static Dictionary<Type, List<Type>> GetHandlerDependencies(EndpointConfiguration configuration)
     {
-        var field = typeof(EndpointConfiguration)
-            .GetField("scannedTypes", BindingFlags.Instance | BindingFlags.NonPublic);
-        if (field == null)
+        var settings = configuration.GetSettings();
+        if (!settings.TryGet("TypesToScan", out List<Type> types))
         {
-            throw new($"Could not extract 'scannedTypes' field from {nameof(EndpointConfiguration)}. Raise an issue here https://github.com/NServiceBusExtensions/NServiceBus.HandlerOrdering/issues/new");
+            throw new("Could not extract 'TypesToScan' from settings. Raise an issue here https://github.com/NServiceBusCommunity/NServiceBus.Community.HandlerOrdering/issues/new");
         }
-
-        var types = (List<Type>) field.GetValue(configuration)!;
         return GetHandlerDependencies(types);
     }
 

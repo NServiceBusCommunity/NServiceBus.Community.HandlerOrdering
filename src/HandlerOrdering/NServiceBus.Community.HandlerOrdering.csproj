@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>NServiceBus.HandlerOrdering</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NServiceBus" Version="9.2.7" />
+    <PackageReference Include="NServiceBus" Version="10.0.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.170" PrivateAssets="all" />
   </ItemGroup>
 </Project>

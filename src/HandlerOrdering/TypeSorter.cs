@@ -14,6 +14,7 @@
             stack = new();
             Visit(item);
         }
+
         Sorted = new(sorted);
     }
 
@@ -36,8 +37,10 @@
 
                 throw new(stringBuilder.ToString());
             }
+
             return;
         }
+
         visited.Add(item);
         if (dependencies.TryGetValue(item, out var values))
         {
@@ -46,6 +49,7 @@
                 Visit(dependency);
             }
         }
+
         sorted.Add(item);
     }
 }
