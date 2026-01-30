@@ -6,6 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NServiceBus" Version="9.2.7" />
-    <ProjectReference Include="..\HandlerOrdering\NServiceBus.HandlerOrdering.csproj" />
+    <ProjectReference Include="..\HandlerOrdering\NServiceBus.Community.HandlerOrdering.csproj" />
   </ItemGroup>
 </Project>
