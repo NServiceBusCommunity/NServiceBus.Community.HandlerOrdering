@@ -10,7 +10,6 @@
     <PackageReference Include="Verify.Xunit" />
     <PackageReference Include="Xunit" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
-    <PackageReference Include="XunitContext" />
     <ProjectReference Include="..\HandlerOrdering\NServiceBus.Community.HandlerOrdering.csproj" />
   </ItemGroup>
 </Project>
