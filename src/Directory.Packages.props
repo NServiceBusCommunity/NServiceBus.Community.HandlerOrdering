@@ -5,7 +5,7 @@
   <ItemGroup>
     <PackageVersion Include="NServiceBus" Version="10.1.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.172" />
-    <PackageVersion Include="Verify.XunitV3" Version="31.12.4" />
+    <PackageVersion Include="Verify.XunitV3" Version="31.12.5" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
   </ItemGroup>
 </Project>
