@@ -8,6 +8,11 @@
   <ItemGroup>
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
     <PackageReference Include="Verify.XunitV3" />
+    <PackageReference Include="Argon" />
+    <PackageReference Include="DiffEngine" />
+    <PackageReference Include="EmptyFiles" />
+    <PackageReference Include="SimpleInfoName" />
+    <PackageReference Include="Verify" />
     <PackageReference Include="xunit.v3" />
     <ProjectReference Include="..\HandlerOrdering\NServiceBus.Community.HandlerOrdering.csproj" />
   </ItemGroup>
