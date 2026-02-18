@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-
-public class TypeSorterTests(VerifySettings? output) :
-    VerifyBase(output)
+﻿public class TypeSorterTests
 {
     public class SimpleSort
     {

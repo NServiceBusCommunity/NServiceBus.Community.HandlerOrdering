@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-public class Ensure_cascading_dependencies_are_resolved
+﻿public class Ensure_cascading_dependencies_are_resolved
 {
     [Test]
     public async Task Run()
