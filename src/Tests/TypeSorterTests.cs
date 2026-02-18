@@ -1,10 +1,12 @@
-﻿public class TypeSorterTests(VerifySettings? output) :
+﻿using System.Threading.Tasks;
+
+public class TypeSorterTests(VerifySettings? output) :
     VerifyBase(output)
 {
     public class SimpleSort
     {
-        [Fact]
-        public void Run()
+        [Test]
+        public async Task Run()
         {
             var dependencies = new Dictionary<Type, List<Type>>
             {
@@ -16,10 +18,10 @@
                 [typeof(Class2)] = [typeof(Class3)]
             };
             var sorted = new TypeSorter(dependencies).Sorted;
-            Assert.Equal(3, sorted.Count);
-            Assert.Equal(typeof (Class3), sorted[0]);
-            Assert.Equal(typeof (Class2), sorted[1]);
-            Assert.Equal(typeof (Class1), sorted[2]);
+            await Assert.That(sorted.Count).IsEqualTo(3);
+            await Assert.That(sorted[0]).IsEqualTo(typeof (Class3));
+            await Assert.That(sorted[1]).IsEqualTo(typeof (Class2));
+            await Assert.That(sorted[2]).IsEqualTo(typeof (Class1));
         }
 
         class Class1;
@@ -31,8 +33,8 @@
 
     public class Ensure_circular_dependencies_are_handled
     {
-        [Fact]
-        public void Run()
+        [Test]
+        public async Task Run()
         {
             var dependencies = new Dictionary<Type, List<Type>>
             {
@@ -52,7 +54,7 @@
                     'Class2' wants to run after 'Class1'.
 
                     """.Replace("\r\n","").Replace("\n","");
-            Assert.Equal(expected, exception.Message.Replace("\r\n", "").Replace("\n", ""));
+            await Assert.That(exception.Message.Replace("\r\n", "").Replace("\n", "")).IsEqualTo(expected);
         }
 
         class Class1;
@@ -62,8 +64,8 @@
 
     public class Ensure_self_dependencies_are_handled
     {
-        [Fact]
-        public void Run()
+        [Test]
+        public async Task Run()
         {
             var dependencies = new Dictionary<Type, List<Type>>
             {
@@ -78,7 +80,7 @@
                            'Class1' wants to run after 'Class1'.
 
                            """.Replace("\r\n","").Replace("\n","");
-            Assert.Equal(expected, exception.Message.Replace("\r\n", "").Replace("\n", ""));
+            await Assert.That(exception.Message.Replace("\r\n", "").Replace("\n", "")).IsEqualTo(expected);
         }
 
         class Class1;

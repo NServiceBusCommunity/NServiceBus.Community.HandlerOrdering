@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -8,13 +7,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
-    <PackageReference Include="Verify.XunitV3" />
+    <PackageReference Include="Verify.TUnit" />
     <PackageReference Include="Argon" />
     <PackageReference Include="DiffEngine" />
     <PackageReference Include="EmptyFiles" />
     <PackageReference Include="SimpleInfoName" />
     <PackageReference Include="Verify" />
-    <PackageReference Include="xunit.v3" />
     <ProjectReference Include="..\HandlerOrdering\NServiceBus.Community.HandlerOrdering.csproj" />
+    <PackageReference Include="TUnit" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,9 @@
-﻿public class Ensure_cascading_dependencies_are_resolved
+﻿using System.Threading.Tasks;
+
+public class Ensure_cascading_dependencies_are_resolved
 {
-    [Fact]
-    public void Run()
+    [Test]
+    public async Task Run()
     {
         var types = new List<Type>
         {
@@ -11,9 +13,9 @@
         };
         var handlerDependencies = OrderHandlers.GetHandlerDependencies(types);
 
-        Assert.Contains(typeof(Class2), handlerDependencies[typeof(Class1)]);
-        Assert.Contains(typeof(Class3), handlerDependencies[typeof(Class1)]);
-        Assert.Contains(typeof(Class3), handlerDependencies[typeof(Class2)]);
+        await Assert.That(handlerDependencies[typeof(Class1)]).Contains(typeof(Class2));
+        await Assert.That(handlerDependencies[typeof(Class1)]).Contains(typeof(Class3));
+        await Assert.That(handlerDependencies[typeof(Class2)]).Contains(typeof(Class3));
     }
 
     class Class1 :
