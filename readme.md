@@ -141,7 +141,7 @@ public class MessageHandler2 :
 ```cs
 endpointConfiguration.ApplyInterfaceHandlerOrdering();
 ```
-<sup><a href='/src/Sample/Program.cs#L14-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-config' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Sample/Program.cs#L16-L18' title='Snippet source file'>snippet source</a> | <a href='#snippet-config' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
