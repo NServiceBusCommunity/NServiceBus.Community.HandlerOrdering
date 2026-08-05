@@ -3,7 +3,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="NServiceBus" Version="10.2.7" />
+    <PackageVersion Include="NServiceBus" Version="10.2.8" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.176" />
     <PackageVersion Include="Verify.TUnit" Version="31.28.0" />
     <PackageVersion Include="Argon" Version="0.35.2" />
