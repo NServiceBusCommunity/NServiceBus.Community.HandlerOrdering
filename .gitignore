@@ -87,3 +87,4 @@ Fody/.DS_Store
 *.bak
 src/.idea/
 nul
+*.lnk
